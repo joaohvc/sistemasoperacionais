@@ -19,11 +19,11 @@ Exercícios Teóricos – Processos
 7. Compare memória compartilhada e troca de mensagens (IPC).
     Memoria Compartilhada:Funciona quando dois ou mais processos acessas uma mesma area de memoria.Sendo suas vantagens:É muito rapida(acesso direto a memoria), Permite transferencia de grandes volumes de dados sem copia.                              Troca De Mensagens (IPC): Funciona com o processos de enviar mensagens entre si via sistema                                  operacional(FILAS,PIPES,SOCKETS).Sendo suas vantagens:
 8. Cite exemplos de chamadas de sistema usadas em IPC.
-    
+    1°:Pipes e FIFOs 2°:Memoria Compartilhada (System V IPC) 3°:Filas de Mensagens 4°:Semaforos 5°:Sinais.
 9. Por que é importante que o sistema operacional faça gerenciamento de processos?
-    
+    Permite que varios processos rodem ao mesmo tempo, mesmo que haja apenas uma CPU, usando escalonamento e troca de            contexto, Isolamento e segurança, Gerenciamento de recursos. Coordenação e comunicação, Estabilidade do sistema.
 10. Explique a diferença entre processos independentes e processos cooperativos.
-    
+    Processos Independentes: Eles nao dependem de outros processos, nao compartilham dados nem recursos com outros               processos, sua execuçao nao afeta nem afetada por outros processos.                                                          Processos coorperativos Eles dependem de outros processos para realizar tarefas, compartilham dados, memoria ou              recursos, precisam coordenar açoes para evitar conflitos.
 11. O que é um processo zumbi em UNIX/Linux?
     
 12. Explique a diferença entre chamadas bloqueantes e não bloqueantes em IPC.
