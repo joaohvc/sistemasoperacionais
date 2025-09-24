@@ -25,12 +25,15 @@ Exercícios Teóricos – Processos
 10. Explique a diferença entre processos independentes e processos cooperativos.
     Processos Independentes: Eles nao dependem de outros processos, nao compartilham dados nem recursos com outros               processos, sua execuçao nao afeta nem afetada por outros processos.                                                          Processos coorperativos Eles dependem de outros processos para realizar tarefas, compartilham dados, memoria ou              recursos, precisam coordenar açoes para evitar conflitos.
 11. O que é um processo zumbi em UNIX/Linux?
-    
+    Um processo zumbi em UNIX/Linux é um processo que já terminou sua execução, mas que ainda permanece na tabela de processos do sistema porque o processo pai ainda não coletou o seu status de término (via chamada      de sistema wait() ou waitpid()).
 12. Explique a diferença entre chamadas bloqueantes e não bloqueantes em IPC.
-    
+    Em IPC (Inter-Process Communication), ou Comunicação entre Processos, a diferença entre chamadas bloqueantes e não bloqueantes está no comportamento do processo emissor/receptor quando a operação de comunicação      não pode ser imediatamente concluída.
 13. Qual a diferença entre processo pesado (process) e thread (processo leve)?
-    
+    Processo pesado:É a unidade de execução independente no sistema,tem seu próprio espaço de endereçamento (memória isolada),possui seus próprios recursos alocados (descritores de arquivos, pilha, registradores,        etc.),A comunicação entre processos (IPC) é necessária para troca de dados (pipes, filas, sockets etc.),A criação de um processo é relativamente cara (demora mais, consome mais recursos).                                                       Thread(Processo leve):Também é uma unidade de execução, mas dentro de um processo,compartilha o espaço de endereçamento do processo pai e os mesmos recursos (memória global, arquivos abertos etc.),tem apenas seu próprio contador de programa, registradores e pilha,a comunicação entre threads é muito mais rápida, já que compartilham memória
 14. Por que sistemas operacionais multiprogramados precisam de troca de contexto (context switch)?
-    
+    Um sistema multiprogramado tem como objetivo executar vários processos "ao mesmo tempo" (concorrência). Mas, na prática, o processador só consegue executar uma instrução por núcleo de CPU de cada vez.Para dar a ilusão de paralelismo e garantir que todos os processos recebam tempo de CPU, o sistema precisa alternar a execução entre processos.Essa alternância é feita pela troca de contexto (context switch).
 15. Cite vantagens e desvantagens da comunicação via memória compartilhada.
-    
+    Velocidade alta – não há cópia extra de dados entre processos; todos acessam a mesma área de memória.
+Baixa sobrecarga – após a configuração inicial, o kernel quase não participa da comunicação (diferente de pipes, mensagens ou sockets).
+Ideal para grandes volumes de dados – muito mais eficiente que mandar dados grandes por pipe/fila.
+Flexibilidade – os processos podem estruturar os dados da forma que quiserem dentro da memória.
