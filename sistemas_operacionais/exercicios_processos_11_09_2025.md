@@ -1,19 +1,21 @@
 ### Questões sobre Ferramentas de Monitoramento de Sistema
 
 1.  **Comparação de Finalidade e Acesso:** Qual a principal diferença na finalidade e na forma de acesso entre o Monitor de Atividade e o `top`? Como o Gerenciador de Tarefas se alinha com essa distinção?
-
+Monitor de Atividade (macOS) e Gerenciador de Tarefas (Windows) têm foco em usuários comuns, via GUI, mostrando recursos de forma intuitiva.
+top (Unix/Linux) tem foco em usuários técnicos, via CLI, fornecendo dados mais detalhados.
 2.  **Monitoramento de CPU:** Como você usaria cada uma das três ferramentas para identificar qual processo está consumindo a maior parte da CPU em tempo real? Descreva os passos básicos para cada sistema operacional.
-
+      No macOS eu abriria o monitor de atividade, e na janela de CPU eu irei vereficar no grafico qual estava consumindo mais da CPU ou memoria.Agora no Linux eu abriria o terminal, digitaria o comando bash e top para me mostrar os processos em tempo real.Agora no Windows eu abriria o gerenciador de tarefas e iria na aba de processos e verificaria qual processo esta consumindo mais do meu PC.
 3.  **Análise de Memória:** O Monitor de Atividade e o Gerenciador de Tarefas apresentam detalhes sobre o uso de memória (como memória física e swap). Como o `top` em Linux exibe essa informação e quais métricas de memória são mais relevantes para entender o consumo de um processo?
 
 4.  **Processos e PIDs:** Explique a importância do **PID** (ID do Processo) e como ele é exibido em cada uma das ferramentas. Como você usaria o PID para encerrar um processo que não responde em cada sistema operacional?
-
+PID (Process ID) é um número único que o sistema operacional atribui a cada processo ativo.Ele é essencial para:Identificar processos individualmente.Monitorar e depurar execução.Controlar e encerrar processos específicos.Sem o PID, o SO não teria como diferenciar vários processos com o mesmo nome (ex.: várias abas do Chrome)
+No windows o PID é exibido no gerenciador de tarefas, no LINUX é exibido no TOP e no macOS é exibido no monitor de attividade.
 5.  **Diferença na Interface:** Descreva as principais diferenças na interface do usuário (UI) entre as três ferramentas. Qual delas é mais orientada a comandos de texto e qual é mais visual?
-
+Mais orientado a comandos de texto: top (Linux/Unix).Mais visuais: Monitor de Atividade (macOS) e Gerenciador de Tarefas (Windows), ambos em GUI com gráficos e tabelas.
 6.  **Monitoramento de Rede:** Como o Monitor de Atividade e o Gerenciador de Tarefas permitem inspecionar o tráfego de rede de diferentes aplicativos? Qual comando ou técnica similar é usada no Linux para obter informações detalhadas sobre a atividade de rede de processos?
-
+No macOS:Aba Rede: mostra o tráfego de cada aplicativo/processo.Colunas típicas: Bytes enviados, Bytes recebidos, Pacotes enviados/recebidos.Permite ordenar os processos para ver quem está mais consumindo rede.Interface 100% visual e integrada.No windows:Aba Rede: mostra o tráfego de cada aplicativo/processo.Colunas típicas: Bytes enviados, Bytes recebidos, Pacotes enviados/recebidos.Permite ordenar os processos para ver quem está mais consumindo rede.Interface 100% visual e integrada.E no linux para mostrar o consumo de por processo é o "nethogs", oque mostra conexoes de rede ativas, mas por IP/destino é o "iftop".
 7.  **Análise de Disco:** O Monitor de Atividade e o Gerenciador de Tarefas possuem abas ou seções dedicadas para monitorar a atividade do disco (leitura/escrita). Qual a importância de monitorar o disco e como o `top` (ou uma ferramenta complementar do Linux) pode ser usado para obter essa mesma informação?
 
 8.  **Hierarquia de Processos:** Em que medida o Monitor de Atividade e o Gerenciador de Tarefas são capazes de exibir a hierarquia de processos (processos pais e filhos)? E como o `top` pode ser configurado ou complementado com outro comando para mostrar essa hierarquia?
 
-9.  **Uso em Servidores vs. Desktops:** Qual das três ferramentas é mais adequada para monitoramento em ambientes de servidor (especialmente sem interface gráfica)? Justifique sua resposta, explicando como as características de cada uma se encaixam melhor em cenários de servidor ou de desktop.
+10.  **Uso em Servidores vs. Desktops:** Qual das três ferramentas é mais adequada para monitoramento em ambientes de servidor (especialmente sem interface gráfica)? Justifique sua resposta, explicando como as características de cada uma se encaixam melhor em cenários de servidor ou de desktop.
