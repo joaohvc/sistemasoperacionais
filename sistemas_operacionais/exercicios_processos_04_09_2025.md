@@ -6,7 +6,7 @@ Exercícios Teóricos – Processos
    Programa: Conjunto de instruções armazenadas em disco (entidade passiva).
    Processo: Programa em execução, com estado, memória e recursos alocados (entidade ativa).
 2. Quais são os estados de um processo e quando ocorrem as transições?
-   
+   Novo(new),pronto(ready),em execuçao(running),espera?bloqueado(waiting/blocked),terminando(exit).
 3. O que contém um Process Control Block (PCB)?
    O PCB (Process Control Block) é como a “ficha de identidade” de cada processo. Ele guarda todas as informações               necessárias para o sistema operacional pausar e retomar o processo depois.E oque contém um PCB é a indentificaçao do         processo, estado do rocesso, contador de programa, contexto de registradores da CPU, informaçoes de escalonamento e          informaçoes de gerenciamento de memorias
 4. O que acontece com os recursos de um processo quando ele termina?
